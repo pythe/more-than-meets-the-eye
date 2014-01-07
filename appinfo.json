@@ -1,0 +1,37 @@
+{
+  "uuid": "aae5dea2-5d9f-41bc-bbd1-c9bad7530611",
+  "shortName": "Transformers",
+  "longName": "More Than Meets the Eye",
+  "companyName": "Dungeoneer",
+  "versionCode": 1,
+  "versionLabel": "1.0.0",
+  "watchapp": {
+    "watchface": true
+  },
+  "appKeys": {
+  },
+  "resources": {
+    "media": [
+      {
+        "type": "font",
+        "name": "FONT_TRANSFORMERS_38",
+        "file": "fonts/transformers.ttf"
+      },
+      {
+        "type": "font",
+        "name": "FONT_TRANSFORMERS_21",
+        "file": "fonts/transformers.ttf"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_AUTOBOTS",
+        "file": "images/autobots.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_DECEPTICONS",
+        "file": "images/decepticons.png"
+      }
+    ]
+  }
+}
