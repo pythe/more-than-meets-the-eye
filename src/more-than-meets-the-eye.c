@@ -15,14 +15,14 @@ GBitmap *autobots_bmp;
 GBitmap *decepticons_bmp;
 
 void handle_tap(AccelAxisType axis, int32_t direction) {
-  if (axis == 0) {
-    APP_LOG(APP_LOG_LEVEL_DEBUG, "X TAP");
+  if (axis == 2) {
+    APP_LOG(APP_LOG_LEVEL_DEBUG, "Z TAP");
   } else if (axis == 1) {
     APP_LOG(APP_LOG_LEVEL_DEBUG, "Y TAP");
   }
 
-  if(axis == 2) {
-    APP_LOG(APP_LOG_LEVEL_DEBUG, "Z TAP");
+  if(axis == 0) {
+    APP_LOG(APP_LOG_LEVEL_DEBUG, "X TAP");
 
     switch(tap_count) {
       case 0:
