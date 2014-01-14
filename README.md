@@ -6,6 +6,10 @@ Pebble watch face featuring Autobot and Decepticon logos.
 
 For those who want to display their allegiance to a faction of robots in disguise - and change it at the flick of the wrist.
 
+##Operation
+
+An accelerometer "x tap" (i.e. along the axis of your wrist) will change the displayed logo.
+
 ##Licensing
 
 Images and font licensed for free use. Sources:

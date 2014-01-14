@@ -25,12 +25,12 @@
       {
         "type": "png",
         "name": "IMAGE_AUTOBOTS",
-        "file": "images/autobots.png"
+        "file": "images/autobots_small.png"
       },
       {
         "type": "png",
         "name": "IMAGE_DECEPTICONS",
-        "file": "images/decepticons.png"
+        "file": "images/decepticons_small.png"
       }
     ]
   }
