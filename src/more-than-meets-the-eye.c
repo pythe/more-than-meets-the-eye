@@ -89,9 +89,7 @@ void handle_minute_tick(struct tm *tick_time, TimeUnits units_changed) {
   text_layer_set_text(text_time_layer, time_text);
 }
 
-void window_load(Window *win) {
-  window = window_create();
-  window_stack_push(window, true /* Animated */);
+void window_load(Window *window) {
   window_set_background_color(window, GColorWhite);
 
   Layer *window_layer = window_get_root_layer(window);
@@ -117,7 +115,7 @@ void window_load(Window *win) {
   logo_layer = bitmap_layer_create(GRect(24,2,96,74));
   autobots_bmp = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_AUTOBOTS);
   decepticons_bmp = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_DECEPTICONS);
-  bitmap_layer_set_bitmap(logo_layer, gbitmap_create_with_resource(RESOURCE_ID_IMAGE_AUTOBOTS));
+  bitmap_layer_set_bitmap(logo_layer, autobots_bmp);
   layer_add_child(window_layer, bitmap_layer_get_layer(logo_layer));
   
 };
@@ -125,6 +123,14 @@ void window_load(Window *win) {
 void window_unload(Window * win) {
   tick_timer_service_unsubscribe();
   accel_tap_service_unsubscribe();
+
+  gbitmap_destroy(autobots_bmp);
+  gbitmap_destroy(decepticons_bmp);
+
+  bitmap_layer_destroy(logo_layer);
+  text_layer_destroy(text_parking_layer);
+  text_layer_destroy(text_time_layer);
+  text_layer_destroy(text_date_layer);
 };
 
 static void init(void) {
