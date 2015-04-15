@@ -57,9 +57,7 @@ void handle_minute_tick(struct tm *tick_time, TimeUnits units_changed) {
   strftime(date_text, sizeof(date_text), "%B %e", tick_time);
   text_layer_set_text(text_date_layer, date_text);
 
-  char *day_num = "XX";
-  strftime(day_num,  sizeof(day_num), "%e", tick_time);
-  int week_num = atoi(day_num)/7;
+  int week_num =  (tick_time->tm_mday - 1) / 7;
   char *week_num_text = weeks[week_num];
 
   char *day_name = "Xxxxxxxxx";
@@ -117,7 +115,7 @@ void window_load(Window *window) {
   decepticons_bmp = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_DECEPTICONS);
   bitmap_layer_set_bitmap(logo_layer, autobots_bmp);
   layer_add_child(window_layer, bitmap_layer_get_layer(logo_layer));
-  
+
 };
 
 void window_unload(Window * win) {
