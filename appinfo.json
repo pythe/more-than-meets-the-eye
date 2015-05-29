@@ -8,8 +8,7 @@
   "watchapp": {
     "watchface": true
   },
-  "appKeys": {
-  },
+  "appKeys": {},
   "resources": {
     "media": [
       {
@@ -33,5 +32,10 @@
         "file": "images/decepticons_small.png"
       }
     ]
-  }
+  },
+  "targetPlatforms": [
+    "aplite",
+    "basalt"
+  ],
+  "sdkVersion": "3"
 }
